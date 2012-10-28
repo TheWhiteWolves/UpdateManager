@@ -130,7 +130,7 @@ public class mod_UpdateManager{
 		}
 
 		public String getModURL() {
-			return "http://www.minecraftforum.net/topic/1243564-any-version-mod-update-manager-last-updated-22512/";
+			return "http://www.minecraftforum.net/topic/1541473-142-mod-update-manager-v30/";
 		}
 		
 		public String getUpdateURL() {
