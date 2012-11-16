@@ -47,7 +47,7 @@ import cpw.mods.fml.common.registry.TickRegistry;
 /**
  * @author Vazkii, TheWhiteWolves
  */
-@Mod(modid = "UpdateManager_TheWhiteWolves", name = "Mod Update Manager", version = "v3.0")
+@Mod(modid = "UpdateManager_TheWhiteWolves", name = "Mod Update Manager", version = "v3.1")
 public class mod_UpdateManager{
 	
 	public static final String[] langs = new String[]{
@@ -130,7 +130,7 @@ public class mod_UpdateManager{
 		}
 
 		public String getModURL() {
-			return "http://www.minecraftforum.net/topic/1541473-142-mod-update-manager-v30/";
+			return "http://www.minecraftforum.net/topic/1541473-144-mod-update-manager-v31/";
 		}
 		
 		public String getUpdateURL() {
@@ -138,7 +138,7 @@ public class mod_UpdateManager{
 		}
 		
 		public String getUMVersion(){
-			return "3.0";
+			return "3.1";
 		}
 		
 		public  ModType getModType(){
@@ -150,7 +150,7 @@ public class mod_UpdateManager{
 		}
 		
 		public String getChangelogURL(){
-			return "https://dl.dropbox.com/u/43671482/Update%20Manager/Ingame%20Changelog%20UM2.txt";
+			return "https://dl.dropbox.com/u/43671482/Update%20Manager/Ingame%20Changelog%20UM.txt";
 		}
 		
 		public String getDirectDownloadURL(){
