@@ -22,7 +22,7 @@ import updatemanager.common.UpdateManager;
 import updatemanager.common.UpdateManagerMod;
 
 /**
- * @author Vazkii, cpw, TheWhiteWolves, Nerd-Boy4
+ * @author Vazkii, cpw, TheWhiteWolves, Nerd-Boy4 
  */
 public class GuiModList extends GuiScreen {
 
