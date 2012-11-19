@@ -6,7 +6,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.server.MinecraftServer;
 
 /**
- * @author Vazkii, TheWhiteWolves
+ * @author Vazkii, TheWhiteWolves, Nerd-Boy
  */
 public class ThreadUpdateManager extends Thread {
 
