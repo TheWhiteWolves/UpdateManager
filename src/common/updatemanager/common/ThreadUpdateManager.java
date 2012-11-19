@@ -18,10 +18,10 @@ public class ThreadUpdateManager extends Thread {
 	boolean firstTickUpdate;
 	
 	public ThreadUpdateManager(Object object) {
-		if(object instanceof Minecraft)
-			mc = (Minecraft)object;
-		else if(object instanceof MinecraftServer)
+		if(object instanceof MinecraftServer)
 			ms = (MinecraftServer)object;
+		else if(object instanceof Minecraft)
+			mc = (Minecraft)object;
 		
 		setName("Update Manager Thread");
 		firstRun = true;

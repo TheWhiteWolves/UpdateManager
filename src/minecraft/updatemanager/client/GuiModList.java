@@ -88,10 +88,13 @@ public class GuiModList extends GuiScreen {
 			offset += dim.width;
 			GL11.glPushMatrix();
 			GL11.glScalef(2.0F, 2.0F, 2.0F);
-			fontRenderer.drawStringWithShadow(selectedMod.getModName(), offset/2, shifty/2+(dim.height == 0 ? 0 :(dim.height/2-12)), selectedMod.getModType().getHex());
+			// Allows the title to be split in the correct position.
+			fontRenderer.drawSplitString(selectedMod.getModName(), offset/2+1, shifty/2+(dim.height == 0 ? 0 :(dim.height/2-12))+1, (width-offset-75) / 2+1,
+					(selectedMod.getModType().getHex() & 0xFCFCFC) >> 2 | (selectedMod.getModType().getHex() & 0xFF000000));
+			fontRenderer.drawSplitString(selectedMod.getModName(), offset/2, shifty/2+(dim.height == 0 ? 0 :(dim.height/2-12)), (width-offset-75) / 2, selectedMod.getModType().getHex());
 			GL11.glScalef(1.0F, 1.0F, 1.0F);
 			GL11.glPopMatrix();
-			shifty += Math.max(25, dim.height);
+			shifty += Math.max(25*calcNoLinesForSplitString(fontRenderer, selectedMod.getModName(), (width-offset-75) / 2), dim.height);
 			shifty = typeLine(selectedMod.getModType() != ModType.UNDEFINED ? "Mod Type: " + selectedMod.getModType().getName() : null, offset, shifty);
 			shifty = typeLine(selectedMod.getReleaseType() != ModReleaseType.RELEASED ? selectedMod.getReleaseType().getName() : null, offset, shifty, selectedMod.getReleaseType().getHex());
 			shifty += 5;
@@ -231,5 +234,64 @@ public class GuiModList extends GuiScreen {
 
 	public int getSelected() {
 		return selected;
+	}
+
+	/**
+	 * This method just counts the number of lines required for splitLine rendering. 
+	 * It is basically just copied/pasted from the methods in fontrenderer
+	 * If you think it would be usefull elsewhere copy/paste it to a static class.
+	 */
+	private int calcNoLinesForSplitString(FontRenderer fr, String string, int k){
+		
+		String[] var7 = string.split(" ");
+        int var8 = 0;
+        String var9;
+
+        int lineCount = 0;
+        for (var9 = ""; var8 < var7.length; ++var8)
+        {
+            String var10 = var7[var8];
+            
+            if (fr.getStringWidth(var10) >= k)
+            {
+                if (var9.length() > 0)
+                {
+                	lineCount++;
+                }
+
+                do
+                {
+                    int var11;
+
+                    for (var11 = 1; fr.getStringWidth(var10.substring(0, var11)) < k; ++var11)
+                    {
+                        ;
+                    }
+
+
+                    lineCount++;
+                    var10 = var10.substring(var11 - 1);
+                }
+                while (fr.getStringWidth(var10) >= k);
+
+                var9 = var10;
+            }
+            else if (fr.getStringWidth(var9 + " " + var10) >= k)
+            {
+            	lineCount++;
+                var9 = var10;
+            }
+            else
+            {
+                if (var9.length() > 0)
+                {
+                    var9 = var9 + " ";
+                }
+
+                var9 = var9 + var10;
+            }
+        }
+        return lineCount+1;
+            
 	}
 }
