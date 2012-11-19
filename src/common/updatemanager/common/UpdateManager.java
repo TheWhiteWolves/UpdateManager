@@ -60,7 +60,7 @@ public class UpdateManager {
 	/**
 	 * The webpage for the Update Manager forum topic.
 	 */
-	public static final String umWebpage = "http://bit.ly/modUpdateManager";
+	public static final String umWebpage = "http://bit.ly/SYxN78";
 
 	/**
 	 * Checks if the client is online.

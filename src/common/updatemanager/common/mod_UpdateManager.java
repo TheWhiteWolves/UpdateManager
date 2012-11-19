@@ -130,7 +130,7 @@ public class mod_UpdateManager{
 		}
 
 		public String getModURL() {
-			return "http://www.minecraftforum.net/topic/1541473-144-mod-update-manager-v31/";
+			return "http://www.minecraftforum.net/topic/1541473-144-mod-update-manager-v32/";
 		}
 		
 		public String getUpdateURL() {
@@ -138,7 +138,7 @@ public class mod_UpdateManager{
 		}
 		
 		public String getUMVersion(){
-			return "3.1";
+			return "3.2";
 		}
 		
 		public  ModType getModType(){
