@@ -17,7 +17,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.src.ModLoader;
 
 /**
- * @author Vazkii, TheWhiteWolves
+ * @author Vazkii, TheWhiteWolves, Nerd-Boy4
  */
 public class ThreadDownloadMod extends Thread {
 
