@@ -58,31 +58,12 @@ public class ThreadDownloadMod extends Thread {
 	URL getUrlFromFile(String file) {
 		URL url;
 		try {
-			url = new URL(file);
-			if(url.toString().startsWith("http://bit.ly/")){
-				//read link
-				BufferedReader r = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"));
-				while(r.ready()){
-					String s = r.readLine();
-					if(s.startsWith("<a href=")){
-						s = s.replace("<a href=\"", "").replace("\">moved here</a>", "").replace("&amp;", "&");
-						//parse to URL via URI (to allow for propper formatting)
-						BufferedReader r2 = new BufferedReader(new InputStreamReader(new URL(new URI(null, s, null).toASCIIString()).openStream()));
-						//Read link as normal
-						String s2 = r2.readLine();
-						r2.close();
-						r.close();
-						return new URL(s2);
-					}
-				}
-				r.close();
-				return null;		
-			}else{
-				BufferedReader r = new BufferedReader(new InputStreamReader(url.openStream()));
-				String s = r.readLine();
-				r.close();
-				return new URL(s);
-			}
+		
+			BufferedReader r = new BufferedReader(new InputStreamReader(url.openStream()));
+			String s = r.readLine();
+			r.close();
+			return new URL(s);
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 			return null;

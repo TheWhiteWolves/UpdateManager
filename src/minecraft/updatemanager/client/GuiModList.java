@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.LinkedList;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.src.FontRenderer;
 import net.minecraft.src.GuiButton;
 import net.minecraft.src.GuiScreen;
 import net.minecraft.src.ModLoader;
