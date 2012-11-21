@@ -62,7 +62,7 @@ public class mod_UpdateManager{
 		
 		if(client){
 			CapeHandler.initCapes();
-			File f = ModLoader.getMinecraftInstance().getAppDir("minecraft/downloadedMods");
+			File f = UpdateManager.getDownloadedModsDir();
 			f.mkdirs();
 		}
 		
@@ -89,18 +89,18 @@ public class mod_UpdateManager{
 		ModLoader.addLocalization("um.updated", "[Mod Update Manager] Your mods are up to date!");
 		ModLoader.addLocalization("um.outdated", "[Mod Update Manager] You have outdated mods, open your mod list to see them.");
 		ModLoader.addLocalization("um.offline", "[Mod Update Manager] You are offline, couldn't check.");
-		ModLoader.addLocalization("um.updated.pt_PT", "[Mod Update Manager] Os teus mods estão atualizados!");
+		ModLoader.addLocalization("um.updated.pt_PT", "[Mod Update Manager] Os teus mods estï¿½o atualizados!");
 		ModLoader.addLocalization("um.outdated.pt_PT", "[Mod Update Manager] Tens mods desatualizados, abre a tua lista de mods para os ver.");
-		ModLoader.addLocalization("um.outdated.pt_PT", "[Mod Update Manager] Estás offline, a verificação não foi possivel.");
-		ModLoader.addLocalization("um.updated.es_ES", "[Mod Update Manager] Tus mods están actualizadas!");
+		ModLoader.addLocalization("um.outdated.pt_PT", "[Mod Update Manager] Estï¿½s offline, a verificaï¿½ï¿½o nï¿½o foi possivel.");
+		ModLoader.addLocalization("um.updated.es_ES", "[Mod Update Manager] Tus mods estï¿½n actualizadas!");
 		ModLoader.addLocalization("um.outdated.es_ES", "[Mod Update Manager] Tienes mods desactualizados, abrir tu lista de mods para verlos.");
-		ModLoader.addLocalization("um.offline.es_ES", "[Mod Update Manager] Estás offline, no pudo comprobar.");
-		ModLoader.addLocalization("um.updated.fr_FR", "[Mod Update Manager] Vos mods sont à jours!");
-		ModLoader.addLocalization("um.outdated.fr_FR", "[Mod Update Manager] Certains de vos mods ne sont pas à jours, ouvrez votre liste de mods pour les voir.");
-		ModLoader.addLocalization("um.offline.fr_FR", "[Mod Update Manager] Vous êtes déconnecté, ne peut pas vérifier.");
-		ModLoader.addLocalization("um.updated.ge_GE", "[Mod Update Manager] Überwachte Mods sind aktuell!");
-		ModLoader.addLocalization("um.outdated.ge_GE", "[Mod Update Manager] Veraltete Mods gefunden, für Details siehe Liste.");
-		ModLoader.addLocalization("um.offline.ge_GE", "Nicht online, Prüfung nicht möglich.");
+		ModLoader.addLocalization("um.offline.es_ES", "[Mod Update Manager] Estï¿½s offline, no pudo comprobar.");
+		ModLoader.addLocalization("um.updated.fr_FR", "[Mod Update Manager] Vos mods sont ï¿½ jours!");
+		ModLoader.addLocalization("um.outdated.fr_FR", "[Mod Update Manager] Certains de vos mods ne sont pas ï¿½ jours, ouvrez votre liste de mods pour les voir.");
+		ModLoader.addLocalization("um.offline.fr_FR", "[Mod Update Manager] Vous ï¿½tes dï¿½connectï¿½, ne peut pas vï¿½rifier.");
+		ModLoader.addLocalization("um.updated.ge_GE", "[Mod Update Manager] ï¿½berwachte Mods sind aktuell!");
+		ModLoader.addLocalization("um.outdated.ge_GE", "[Mod Update Manager] Veraltete Mods gefunden, fï¿½r Details siehe Liste.");
+		ModLoader.addLocalization("um.offline.ge_GE", "Nicht online, Prï¿½fung nicht mï¿½glich.");
 		ModLoader.addLocalization("um.updated.de_DE", "[Mod Update Manager] Je mods zijn up-to-date!");
 		ModLoader.addLocalization("um.outdated.de_DE", "[Mod Update Manager] Je hebt verouderde mods, open je mod lijst om deze te zien.");
 		ModLoader.addLocalization("um.offline.de_DE", "[Mod Update Manager] Je bent offline, kon niet controleren.");
