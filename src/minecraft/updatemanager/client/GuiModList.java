@@ -162,7 +162,11 @@ public class GuiModList extends GuiScreen {
 			break;
 		}
 		case 7: {
-			Sys.openURL("file://" + new File(Minecraft.getMinecraftDir(), "downloadedMods").getAbsolutePath());
+			try {
+				Sys.openURL("file://" +UpdateManager.getDownloadedModsDir().getCanonicalPath());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			break;
 		}
 		case 8: {
