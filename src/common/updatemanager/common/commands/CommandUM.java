@@ -11,7 +11,7 @@ import net.minecraft.src.ModLoader;
 import net.minecraft.src.ServerConfigurationManager;
 
 /**
- * @author Vazkii, TheWhiteWolves
+ * @author Vazkii, TheWhiteWolves, Kovu
  */
 public class CommandUM extends CommandBase {
 
@@ -34,6 +34,7 @@ public class CommandUM extends CommandBase {
     		UpdateManager.sendChatMessageToPlayer(manager.getPlayerForUsername(var1.getCommandSenderName()), "/um-reset: Resets the Settings.");
     		UpdateManager.sendChatMessageToPlayer(manager.getPlayerForUsername(var1.getCommandSenderName()), "/um-disable: Disables Update Manager.");
     		UpdateManager.sendChatMessageToPlayer(manager.getPlayerForUsername(var1.getCommandSenderName()), "/um-settings: Views the current Settings.");
+			UpdateManager.sendChatMessageToPlayer(manager.getPlayerForUsername(var1.getCommandSenderName()), "/um-enable: Enables Update Manager.");
 		}
 	}
 }
