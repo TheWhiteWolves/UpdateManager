@@ -89,7 +89,7 @@ public class ThreadDownloadMod extends Thread {
 	public void run() {
 		try {
 			ModLoader.getMinecraftInstance();
-			File f = new File(Minecraft.getAppDir("minecraft/downloadedMods"), modName + ".zip");
+			File f = new File(UpdateManager.getDownloadedModsDir(), modName + ".zip");
 			f.createNewFile();
 			System.out.println("[Mod Update Manager] Starting to download file: " + modName + ".zip to " + f.getAbsolutePath() + ".");
 			FileOutputStream outputStream = new FileOutputStream(f.getAbsolutePath());
