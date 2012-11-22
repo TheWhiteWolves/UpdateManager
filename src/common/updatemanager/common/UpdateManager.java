@@ -132,7 +132,7 @@ public class UpdateManager {
 
 	private static boolean isOnline() {
 		try {
-			new URL("http://74.125.224.72").openConnection().connect();
+			new URL("http://google.com").openConnection().connect();
 			return true;
 		} catch (IOException e) {
 			return false;
