@@ -2,6 +2,7 @@ package updatemanager.common;
 
 import java.awt.Desktop;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.management.ManagementFactory;
@@ -27,6 +28,7 @@ import net.minecraft.src.EntityPlayerMP;
 import net.minecraft.src.ModLoader;
 import net.minecraft.src.Packet3Chat;
 import net.minecraft.src.ServerConfigurationManager;
+import net.minecraft.client.Minecraft;
 
 /**
  * The main Update Manager class, you shouldn't have to call methods from here.
@@ -289,4 +291,7 @@ public class UpdateManager {
 	}
 	
 
+	public static File getDownloadedModsDir(){
+		return new File(Minecraft.getMinecraftDir(), "downloadedMods");
+	}
 }
