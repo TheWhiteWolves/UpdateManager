@@ -9,12 +9,15 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
+import java.awt.Component;
+import java.awt.Frame;
 
 import updatemanager.common.UpdateManager;
 import updatemanager.common.UpdateManagerMod;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.src.ModLoader;
+import cpw.mods.fml.client.FMLClientHandler;
 
 /**
  * @author Vazkii, TheWhiteWolves, Nerd-Boy4
@@ -44,6 +47,7 @@ public class ThreadDownloadMod extends Thread {
 
 		modName = mod.getModName() + " " + UpdateManager.getWebVersionFor(mod);
 		try {
+			activateBitlyLink(mod.getBitlyLink());
 			downloadUrl = getUrlFromFile(urlToFind);
 			downloadUrl.openConnection();
 			webReader = downloadUrl.openStream();
@@ -53,12 +57,14 @@ public class ThreadDownloadMod extends Thread {
 		}
 		setDaemon(true);
 		start();
+
+		regainFocus();
 	}
 
 	URL getUrlFromFile(String file) {
 		URL url;
 		try {
-		
+			url = new URL(file);
 			BufferedReader r = new BufferedReader(new InputStreamReader(url.openStream()));
 			String s = r.readLine();
 			r.close();
@@ -67,10 +73,12 @@ public class ThreadDownloadMod extends Thread {
 		} catch (IOException e) {
 			e.printStackTrace();
 			return null;
-		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
+		}
+	}
+
+	private void activateBitlyLink(String bitlyLink){
+		if(bitlyLink != null){
+			UpdateManager.openWebpage(bitlyLink);
 		}
 	}
 
@@ -78,7 +86,7 @@ public class ThreadDownloadMod extends Thread {
 	public void run() {
 		try {
 			ModLoader.getMinecraftInstance();
-			File f = new File(Minecraft.getAppDir("minecraft/downloadedMods"), modName + ".zip");
+			File f = new File(UpdateManager.getDownloadedModsDir(), modName + ".zip");
 			f.createNewFile();
 			System.out.println("[Mod Update Manager] Starting to download file: " + modName + ".zip to " + f.getAbsolutePath() + ".");
 			FileOutputStream outputStream = new FileOutputStream(f.getAbsolutePath());
@@ -110,5 +118,16 @@ public class ThreadDownloadMod extends Thread {
 				e1.printStackTrace();
 			}
 		}
+	}
+
+	public static void regainFocus() {
+		Component c = FMLClientHandler.instance().getClient().mcCanvas;
+		while(! (c instanceof Frame))
+			c = c.getParent();
+		
+		((Frame)c).setVisible(true);
+		((Frame)c).requestFocus();
+		((Frame)c).toFront();
+		((Frame)c).setExtendedState(Frame.NORMAL);
 	}
 }

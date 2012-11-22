@@ -238,4 +238,12 @@ public abstract class UpdateManagerMod {
 		return getUMVersion();
 	}
 
+	/**
+	 * Allows the mod update manager to re-direct to a bitly page when the download button is hit prior to downloading the mod. This is just a dummy page just to gain statistics. It is recommended to point to the autoclose page as referred to in the Mod Update Manager thread.
+	 * @return The url of the bitlylink
+	 */
+	public String getBitlyLink() {
+		return null;
+	}
+
 }
