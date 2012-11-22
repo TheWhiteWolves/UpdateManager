@@ -3,15 +3,25 @@ package updatemanager.client;
 /**
  * An enum holding the various types of mods.
  * 
- * @author Vazkii, TheWhiteWolves
+ * @author Vazkii, TheWhiteWolves, Kovu
  */
 public enum ModType {
 
 	/**
-	 * A regular mod. Displays in white.
+	 * A mod without category; other. Displays in white.
 	 */
 	UNDEFINED("", true, 0xFFFFFF),
 
+	/**
+	* A tool mod. It adds features such as recording, inventory management, or something non-content related. Displays in orange.
+	*/
+	TOOL("Tool Mod", true, 0xFF6600),
+	
+	/**
+	* A content mod. It adds blocks or items to the game. Displays in pink.
+	*/
+	CONTENT("Content Oriented Mod", true, 0xFF0066),
+	
 	/**
 	 * A core mod. (A requirement for all the optional modules of a modular mod). Displays in blue.
 	 */

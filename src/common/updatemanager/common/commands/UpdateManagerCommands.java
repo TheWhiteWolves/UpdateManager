@@ -6,7 +6,7 @@ import net.minecraft.src.ModLoader;
 import net.minecraft.src.ServerCommandManager;
 
 /**
- * @author Vazkii, TheWhiteWolves
+ * @author Vazkii, TheWhiteWolves, Kovu
  */
 public class UpdateManagerCommands {
 
@@ -26,6 +26,7 @@ public class UpdateManagerCommands {
 		manager.registerCommand(new CommandUMReset());
 		manager.registerCommand(new CommandUMDisable());
 		manager.registerCommand(new CommandUMViewSettings());
+		manager.registerCommand(new CommandUMEnable());
 	}
 	
 }
