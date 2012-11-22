@@ -72,10 +72,6 @@ public class ThreadDownloadMod extends Thread {
 		} catch (IOException e) {
 			e.printStackTrace();
 			return null;
-		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
 		}
 	}
 
