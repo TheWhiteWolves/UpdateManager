@@ -11,7 +11,7 @@ import net.minecraft.src.ServerConfigurationManager;
 /**
  * @author Vazkii, TheWhiteWolves, Kovu
  */
-public class CommandUMDisable extends CommandBase {
+public class CommandUMEnable extends CommandBase {
 
 	@Override
 	public String getCommandName() {
