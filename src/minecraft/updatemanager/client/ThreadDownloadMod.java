@@ -17,6 +17,7 @@ import updatemanager.common.UpdateManagerMod;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.src.ModLoader;
+import cpw.mods.fml.client.FMLClientHandler;
 
 /**
  * @author Vazkii, TheWhiteWolves, Nerd-Boy4
