@@ -66,7 +66,7 @@ public final class Settings {
 	public static void initClientSettings() {
 		System.out.println("Initing Client Settings");
 		setBoolean("autoDownload", false);
-		setBoolean("smpEnable", false);
+		setBoolean("smpEnable", true);
 		setInt("checkDelay", 900);
 	}
 
