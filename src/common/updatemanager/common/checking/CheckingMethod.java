@@ -24,8 +24,7 @@ public abstract class CheckingMethod {
 	 * Splits the version in the numbers representing it, and if returns UMVersion >= webVersion.
 	 * @deprecated Broken, currently redirects to LEXICOGRAPHICAL, use that instead.
 	 */
-	@Deprecated
-	public static final CheckingMethod NUMERICAL = LEXICOGRAPHICAL;
+	public static final CheckingMethod NUMERICAL = new CMNumerical();
 	
 	/**
 	 * Returns that the mod is updated if the length of the web version isn't larger than the UM version.
