@@ -7,9 +7,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.src.GuiButton;
-import net.minecraft.src.GuiScreen;
-import net.minecraft.src.MathHelper;
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.util.MathHelper;
 import net.minecraft.src.ModLoader;
 
 import org.lwjgl.opengl.GL11;

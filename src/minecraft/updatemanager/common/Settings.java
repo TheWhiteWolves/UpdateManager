@@ -6,11 +6,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.src.CompressedStreamTools;
+import net.minecraft.nbt.CompressedStreamTools;
 import net.minecraft.src.ModLoader;
-import net.minecraft.src.NBTTagCompound;
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.asm.SideOnly;
+import net.minecraft.nbt.NBTTagCompound;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 /**
  * @author Vazkii, TheWhiteWolves

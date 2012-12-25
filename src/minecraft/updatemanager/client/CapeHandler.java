@@ -7,8 +7,8 @@ import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 
-import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.World;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.world.World;
 
 /**
  * @author Vazkii, TheWhiteWolves

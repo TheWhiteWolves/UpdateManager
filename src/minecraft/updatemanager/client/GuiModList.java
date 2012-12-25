@@ -9,11 +9,11 @@ import java.net.URL;
 import java.util.LinkedList;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.src.FontRenderer;
-import net.minecraft.src.GuiButton;
-import net.minecraft.src.GuiScreen;
+import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.src.ModLoader;
-import net.minecraft.src.StringTranslate;
+import net.minecraft.util.StringTranslate;
 import net.minecraftforge.common.ForgeVersion;
 
 import org.lwjgl.Sys;

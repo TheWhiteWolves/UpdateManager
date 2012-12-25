@@ -5,10 +5,10 @@ import java.util.logging.Level;
 import updatemanager.common.Settings;
 import updatemanager.common.UpdateManager;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.src.CommandBase;
-import net.minecraft.src.ICommandSender;
+import net.minecraft.command.CommandBase;
+import net.minecraft.command.ICommandSender;
 import net.minecraft.src.ModLoader;
-import net.minecraft.src.ServerConfigurationManager;
+import net.minecraft.server.management.ServerConfigurationManager;
 
 /**
  * @author Vazkii, TheWhiteWolves, Kovu

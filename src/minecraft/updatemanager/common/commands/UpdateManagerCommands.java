@@ -1,9 +1,9 @@
 package updatemanager.common.commands;
 
-import net.minecraft.src.CommandBase;
-import net.minecraft.src.ICommandManager;
+import net.minecraft.command.CommandBase;
+import net.minecraft.command.ICommandManager;
 import net.minecraft.src.ModLoader;
-import net.minecraft.src.ServerCommandManager;
+import net.minecraft.command.ServerCommandManager;
 
 /**
  * @author Vazkii, TheWhiteWolves, Kovu

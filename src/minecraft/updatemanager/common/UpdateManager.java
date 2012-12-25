@@ -23,11 +23,11 @@ import updatemanager.client.ModType;
 import updatemanager.client.ThreadDownloadMod;
 
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.EntityPlayerMP;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.src.ModLoader;
-import net.minecraft.src.Packet3Chat;
-import net.minecraft.src.ServerConfigurationManager;
+import net.minecraft.network.packet.Packet3Chat;
+import net.minecraft.server.management.ServerConfigurationManager;
 import net.minecraft.client.Minecraft;
 
 /**

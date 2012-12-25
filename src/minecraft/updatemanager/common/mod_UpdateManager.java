@@ -7,13 +7,13 @@ import java.util.logging.Level;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.src.Gui;
-import net.minecraft.src.GuiScreen;
-import net.minecraft.src.Item;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.KeyBinding;
+import net.minecraft.client.gui.Gui;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.src.ModLoader;
-import net.minecraft.src.Block;
+import net.minecraft.block.Block;
 
 import org.lwjgl.input.Keyboard;
 
@@ -35,9 +35,9 @@ import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.PostInit;
-import cpw.mods.fml.common.Side;
+import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.common.TickType;
-import cpw.mods.fml.common.asm.SideOnly;
+import cpw.mods.fml.relauncher.SideOnly;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -47,7 +47,7 @@ import cpw.mods.fml.common.registry.TickRegistry;
 /**
  * @author Vazkii, TheWhiteWolves
  */
-@Mod(modid = "UpdateManager_TheWhiteWolves", name = "Mod Update Manager", version = "v3.4")
+@Mod(modid = "UpdateManager_TheWhiteWolves", name = "Mod Update Manager", version = "v3.6")
 public class mod_UpdateManager{
 	
 	public static final String[] langs = new String[]{
@@ -130,7 +130,7 @@ public class mod_UpdateManager{
 		}
 
 		public String getModURL() {
-			return "http://www.minecraftforum.net/topic/1541473-144-mod-update-manager-v34/";
+			return "http://www.minecraftforum.net/topic/1541473-146-mod-update-manager-v36/";
 		}
 		
 		public String getUpdateURL() {
@@ -138,7 +138,7 @@ public class mod_UpdateManager{
 		}
 		
 		public String getUMVersion(){
-			return "3.4";
+			return "3.6";
 		}
 		
 		public  ModType getModType(){

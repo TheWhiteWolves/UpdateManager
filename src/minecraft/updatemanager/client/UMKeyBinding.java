@@ -5,11 +5,11 @@ import java.util.EnumSet;
 
 import org.lwjgl.input.Keyboard;
 
-import net.minecraft.src.GuiScreen;
-import net.minecraft.src.GuiMainMenu;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.gui.GuiMainMenu;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.src.KeyBinding;
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.src.ModLoader;
 import cpw.mods.fml.client.registry.KeyBindingRegistry.KeyHandler;
 import cpw.mods.fml.common.TickType;

@@ -6,21 +6,21 @@ import org.lwjgl.opengl.GL11;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.src.BaseMod;
-import net.minecraft.src.Block;
-import net.minecraft.src.ItemStack;
+import net.minecraft.block.Block;
+import net.minecraft.item.ItemStack;
 import net.minecraft.src.ModLoader;
-import net.minecraft.src.RenderHelper;
-import net.minecraft.src.RenderItem;
-import net.minecraft.src.Item;
-import net.minecraft.src.ItemBlock;
+import net.minecraft.client.renderer.RenderHelper;
+import net.minecraft.client.renderer.entity.RenderItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import updatemanager.client.GuiModList;
 import updatemanager.client.ModReleaseType;
 import updatemanager.client.ModType;
 import updatemanager.common.checking.CheckingMethod;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.asm.SideOnly;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import cpw.mods.fml.common.modloader.BaseModProxy;
 
 /**

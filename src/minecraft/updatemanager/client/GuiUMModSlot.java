@@ -2,10 +2,10 @@ package updatemanager.client;
 
 import updatemanager.common.UpdateManager;
 import updatemanager.common.UpdateManagerMod;
-import net.minecraft.src.FontRenderer;
-import net.minecraft.src.GuiScreen;
+import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.src.ModLoader;
-import net.minecraft.src.Tessellator;
+import net.minecraft.client.renderer.Tessellator;
 import cpw.mods.fml.client.GuiScrollingList;
 
 /**

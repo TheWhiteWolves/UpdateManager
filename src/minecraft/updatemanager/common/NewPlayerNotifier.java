@@ -6,14 +6,14 @@ import java.util.List;
 import java.util.logging.Level;
 
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.MathHelper;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.MathHelper;
 import net.minecraft.src.ModLoader;
-import net.minecraft.src.NetHandler;
-import net.minecraft.src.NetLoginHandler;
-import net.minecraft.src.INetworkManager;
-import net.minecraft.src.Packet1Login;
-import net.minecraft.src.ServerConfigurationManager;
+import net.minecraft.network.packet.NetHandler;
+import net.minecraft.network.NetLoginHandler;
+import net.minecraft.network.INetworkManager;
+import net.minecraft.network.packet.Packet1Login;
+import net.minecraft.server.management.ServerConfigurationManager;
 
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.TickType;
